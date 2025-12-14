@@ -1,8 +1,10 @@
 * {
-    background:     #000000FF;
-    background-alt: #101010FF;
-    foreground:     #FFFFFFFF;
-    selected:       #62AEEFFF;
-    active:         #98C379FF;
-    urgent:         #E06B74FF;
+    background:     #333C43FF; /* bg0 */
+    background-alt: #3A464CFF; /* bg1 */
+    foreground:     #D3C6AAFF; /* fg */
+
+    selected:       #7FBBB3FF; /* blue (focus / selection) */
+    active:         #A7C080FF; /* green (success / active) */
+    urgent:         #E67E80FF; /* red (error / urgent) */
 }
+
