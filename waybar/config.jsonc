@@ -4,7 +4,7 @@
         "reload_style_on_change": true,
 	"height": 30,
         "modules-left": ["hyprland/workspaces"],
-        "modules-center": ["clock"],
+        "modules-center": ["custom/weather", "clock"],
         "modules-right": [
           "group/tray-expander",
           "bluetooth",
@@ -16,17 +16,19 @@
           "on-click": "activate",
           "format": "{icon}",
           "format-icons": {
-            "default": "",
-            "1": "1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-            "5": "5",
-            "6": "6",
-            "7": "7",
-            "8": "8",
-            "9": "9",
-            "active": "󱓻"
+            "1": "𝟏",
+            "2": "𝟐",
+            "3": "𝟑",
+            "4": "𝟒",
+            "5": "𝟓",
+            "6": "𝟔",
+            "7": "𝟕",
+            "8": "𝟖",
+            "9": "𝟗",
+            "10": "𝟏𝟎",
+            "urgent": "",
+            "active": "",
+            "default": ""
           },
           "persistent-workspaces": {
             "1": [],
@@ -110,6 +112,12 @@
         "format-muted": "",
         "format-icons": {
           "default": ["", "", ""]
+        },
+        "custom/weather": {
+        "exec": "~/.config/hypr/scripts/weather.sh",
+        "interval": 3600,
+        "format": "{}",
+        "return-type": "text"
         }
       }
 }

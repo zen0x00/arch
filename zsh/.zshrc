@@ -44,3 +44,5 @@ alias clock='tty-clock -C 7 -c'
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
+
+export PATH="$PATH:/home/aman/.dotnet/tools"
