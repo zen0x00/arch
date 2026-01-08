@@ -4,9 +4,8 @@ install_core_packages() {
 
     local packages=(
         # --- Original core packages ---
-        ntfs-3g mesa gnome-keyring noto-fonts-cjk noto-fonts noto-fonts-extra
-        noto-fonts-emoji libsecret seahorse efibootmgr os-prober lib32-mesa
-        vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader
+        ntfs-3g gnome-keyring noto-fonts-cjk noto-fonts noto-fonts-extra
+        noto-fonts-emoji libsecret seahorse efibootmgr os-prober vulkan-icd-loader lib32-vulkan-icd-loader
         bluez bluez-utils
 
         # --- Added System Utilities ---

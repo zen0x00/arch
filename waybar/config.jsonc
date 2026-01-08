@@ -1,5 +1,5 @@
 {
-  "height": 30,
+  "height": 32,
   "spacing": 16, // Gaps between modules (4px)
   "layer": "top",
   // Choose the order of the modules
@@ -70,7 +70,7 @@
     "format": "{icon}",
     "format-muted": "",
     "format-icons": ["", "", "", "", ""],
-    "on-click": "kitty --class tui -- bash -c \"wiremix\"",
+    "on-click": "kitty --class wiremix --title wiremix -e wiremix",
     "tooltip": false,
   },
   "bluetooth": {
@@ -78,7 +78,7 @@
         "format-disabled": "󰂲",
         "format-connected": "",
         "tooltip-format": "Devices connected: {num_connections}",
-        "on-click": "kitty --class tui -- bash -c \"blueman\""
+        "on-click": "kitty --class bluetui --title bluetui -e bluetui"
   },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
@@ -91,6 +91,6 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "kitty --class tui -- bash -c \"impala\""
+    "on-click": "kitty --class impala --title impala -e impala"
   },
 }
