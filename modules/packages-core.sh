@@ -4,7 +4,7 @@ install_core_packages() {
 
     local packages=(
         # --- Original core packages ---
-        ntfs-3g gnome-keyring noto-fonts-cjk noto-fonts noto-fonts-extra
+        ntfs-3g uwsm gnome-keyring noto-fonts-cjk noto-fonts noto-fonts-extra
         noto-fonts-emoji libsecret seahorse efibootmgr os-prober vulkan-icd-loader lib32-vulkan-icd-loader
         bluez bluez-utils power-profiles-daemon
 
