@@ -68,15 +68,14 @@
   },
   "power-profiles-daemon": {
     "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
-    "tooltip-format": "Power Profile: {profile}",
-    "icon-size": 16,
-    "icons": {
-      "performance": "󰓅",
-      "balanced": "󰾅",
-      "power-saver": "󰌪"
-    },
-    "on-click": "powerprofilesctl cycle"
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
   },
 
   "custom/seperator": {
