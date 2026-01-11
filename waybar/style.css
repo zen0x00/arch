@@ -16,11 +16,6 @@ window#waybar {
   border-radius: 12px;
 }
 
-#custom-cava {
-    font-size: 17px;
-    margin-right: 10px;
-}
-
 .modules-left {
   margin-left: 16px;
 }
@@ -49,3 +44,9 @@ window#waybar {
   margin: 0 -4px;
   opacity: 0.4;
 }
+
+/* Power profiles */
+#power-profiles-daemon {
+  padding-left: 6px;
+}
+
