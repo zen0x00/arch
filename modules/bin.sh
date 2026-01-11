@@ -23,7 +23,7 @@ install_local_bin() {
 
         if [[ ! -x "$file" ]]; then
             debug "Skipping $(basename "$file") (not executable)"
-            ((skipped++))
+            ((++skipped))
             continue
         fi
 
@@ -33,13 +33,13 @@ install_local_bin() {
 
         if [[ -e "$target" ]]; then
             warn "Executable already exists: $name (skipping)"
-            ((skipped++))
+            ((++skipped))
             continue
         fi
 
         ln -s "$file" "$target"
         ok "Linked $name"
-        ((linked++))
+        ((++linked))
     done
 
     ok "Local bin setup complete ($linked linked, $skipped skipped)"

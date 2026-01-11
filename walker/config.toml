@@ -17,6 +17,7 @@ max_results = 256 # 256 should be enough for everyone
 default = [
   "desktopapplications",
   "websearch",
+  "scripts",
 ]
 
 [[providers.prefixes]]
@@ -46,3 +47,12 @@ provider = "clipboard"
 [[emergencies]]
 text = "Restart Walker"
 command = "omarchy-restart-walker"
+
+[[providers.prefixes]]
+prefix = "!"
+provider = "scripts"
+
+[[scripts]]
+name = "Wallpapers"
+path = "~/arch/bin/wallpaper-picker"
+icon = "🖼️"
