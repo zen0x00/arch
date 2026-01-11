@@ -1,184 +1,93 @@
-@import "colors.css";
+@import "./colors.css";
 
-/* =============================
-   GLOBAL
-   ============================= */
+:root {
+  --border-radius: 10px;
+  --cc-bg: transparent;
 
-* {
-    font-family: "JetBrainsMono Nerd Font Propo";
-    transition: 100ms;
-    box-shadow: none;
+  --widget-background: alpha(@noti-bg, 0.5);
+  --noti-bg-alpha: 0.6;
+
+  --padding: calc(var(--border-radius) / 2);
 }
-
-/* =============================
-   NOTIFICATIONS
-   ============================= */
-
-.notification-background .notification .notification-content {
-    padding: 0.818rem;
-    background-color: alpha(@background, 0.85);
-}
-
-/* Low + Normal */
-.notification-background .notification.low .notification-content label,
-.notification-background .notification.normal .notification-content label {
-    color: @foreground;
-}
-
-.notification-background .notification.low .notification-content image,
-.notification-background .notification.normal .notification-content image {
-    color: mix(@foreground, @background, 0.15);
-}
-
-.notification-background .notification.low .notification-content .body,
-.notification-background .notification.normal .notification-content .body {
-    color: mix(@foreground, @background, 0.6);
-}
-
-/* Critical */
-.notification-background .notification.critical .notification-content {
-    background-color: @urgent;
-}
-
-.notification-background .notification.critical .notification-content image {
-    color: @foreground;
-}
-
-.notification-background .notification.critical .notification-content label {
-    color: @foreground;
-}
-
-/* Summary + Time */
-.notification-background .notification .notification-content .summary {
-    color: @foreground;
-}
-
-.notification-background .notification .notification-content .time {
-    color: mix(@foreground, @background, 0.6);
-}
-
-/* =============================
-   CLOSE BUTTON
-   ============================= */
-
-.close-button:hover {
-    background-color: alpha(@selected, 0.25);
-}
-
-/* =============================
-   CONTROL CENTER
-   ============================= */
 
 .control-center {
-    background-color: alpha(@background, 0.95);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.55);
+  border-radius: 0;
 }
 
-/* Sliders */
-.control-center slider {
-    background-color: alpha(@active, 0.35);
+.widgets > .widget,
+.widget-mpris > carouselindicatordots,
+.widget-mpris > box > button {
+  background: var(--widget-background);
+  border-radius: var(--border-radius);
+  padding: calc(var(--border-radius) / 2);
+  border: var(--border);
 }
 
-.control-center slider:hover {
-    background-color: alpha(@active, 0.55);
+.control-center-list-placeholder {
+  padding: var(--border-radius);
 }
 
-.control-center slider:active {
-    background-color: @active;
+.close-button {
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 50%;
+  background: transparent;
+  color: @noti-fg;
+  transition: all 0.2s ease;
 }
 
-/* =============================
-   WIDGET TITLES
-   ============================= */
-
-.widget-title label,
-.widget-title button label {
-    color: @foreground;
+.close-button:hover {
+  background: transparent;
+  color: red;
+  box-shadow: none;
+  transition: all 0.2s ease-in-out;
 }
 
-.widget-title button:hover {
-    background-color: alpha(@selected, 0.2);
+.notification-default-action,
+.notification-action {
+  background: @noti-bg;
+  color: @noti-fg;
 }
 
-.widget-title button:active {
-    background-color: alpha(@selected, 0.4);
+.notification-default-action:hover,
+.notification-action:hover {
+  -gtk-icon-effect: none;
+  background: var(--widget-background);
 }
 
-/* =============================
-   WIDGET BUTTON GRID
-   ============================= */
-
-.widget-buttons-grid {
-    background-color: alpha(@background-alt, 0.6);
+.notification-group {
+  border-radius: var(--border-radius);
+  padding: 8px;
+  background: transparent;
 }
 
-.widget-buttons-grid
-> flowbox
-> flowboxchild
-> button label {
-    color: @foreground;
+.widget.widget-mpris {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  border: none;
 }
-
-.widget-buttons-grid
-> flowbox
-> flowboxchild
-> button:hover {
-    background-color: alpha(@selected, 0.2);
+.widget.widget-mpris > carouselindicatordots {
+  --dots-padding: 4px;
+  padding: var(--dots-padding);
+  padding-left: var(--dots-padding);
+  padding-right: calc(6px + var(--dots-padding));
+  margin: 0;
+  margin-top: var(--padding);
 }
-
-.widget-buttons-grid
-> flowbox
-> flowboxchild
-> button:checked {
-    background-color: @selected;
-    color: @background;
+.widget-mpris > box > button:hover {
+  background: var(--widget-background);
 }
-
-/* =============================
-   VOLUME WIDGET
-   ============================= */
-
-.widget-volume {
-    background-color: alpha(@background-alt, 0.6);
-}
-
-.widget-volume trough {
-    background-color: alpha(@foreground, 0.2);
-}
-
-.widget-volume trough slider {
-    background-color: @active;
-}
-
-/* =============================
-   MPRIS WIDGET
-   ============================= */
-
-.widget-mpris {
-    background-color: alpha(@background-alt, 0.6);
-}
-
 .widget-mpris-player {
-    color: @active;
+  box-shadow: none;
+  border: var(--border);
+  margin: 0 var(--padding);
+}
+.widget-mpris-player:only-child {
+  margin: 0;
 }
 
-/* =============================
-   DO NOT DISTURB
-   ============================= */
-
-.widget-dnd label {
-    color: @foreground;
-}
-
-.widget-dnd > switch {
-    background: @background;
-    border: 1px solid @background-alt;
-}
-
-.widget-dnd > switch:checked {
-    background: @selected;
-}
-
-.widget-dnd > switch slider {
-    background: @background-alt;
+image {
+  border-radius: 0;
+  padding: 0 20px 0 0;
 }

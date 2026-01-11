@@ -1,21 +1,22 @@
 /* =============================
-   GLOBAL COLOR VARIABLES
+   NOTIFICATION COLOR DEFINES
    ============================= */
 
-* {
-    /* Dark cool background (roof / stone) */
-    background:     #1F262BFF; /* bg_main */
-    background-alt: #2A3136FF; /* bg_secondary */
+@define-color noti-border-color     #E6E3DE; /* foreground */
 
-    /* Soft petal white */
-    foreground:     #E6E3DEFF; /* fg_primary */
+@define-color noti-bg               #1F262B; /* background */
+@define-color noti-bg-focus         #1F262B; /* background */
 
-    /* Dusty blush accent */
-    selected:       #CFA3A0FF; /* blossom pink */
+@define-color noti-bg-alt           #2A3136; /* background-alt */
+@define-color noti-bg-hover-alt     #2A3136; /* background-alt */
 
-    /* Muted rosewood (active) */
-    active:         #B07A78FF; /* muted rose */
+@define-color noti-fg               #E6E3DE; /* foreground */
 
-    /* Ink-brown urgency */
-    urgent:         #3A2F2BFF; /* branch brown */
-}
+@define-color noti-bg-hover         #B07A78; /* active */
+
+@define-color noti-close-bg         #CFA3A0; /* selected */
+@define-color noti-close-bg-hover   #B07A78; /* active */
+
+@define-color noti-urgent           #3A2F2B; /* urgent */
+
+@define-color bg-selected           #1F262B; /* background */

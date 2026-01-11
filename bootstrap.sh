@@ -18,6 +18,32 @@ check_internet
 # Ensure yay exists (install if needed)
 check_yay
 
+# -----------------------------------------------
+# MACHINE TYPE SELECTION
+# -----------------------------------------------
+info "Select machine type:"
+echo "1) Desktop"
+echo "2) Laptop"
+echo
+
+read -rp "Enter choice (1/2): " MACHINE
+echo
+
+case "$MACHINE" in
+    1)
+        ok "Desktop selected."
+        MACHINE_TYPE="desktop"
+        ;;
+    2)
+        ok "Laptop selected."
+        MACHINE_TYPE="laptop"
+        ;;
+    *)
+        err "Invalid choice."
+        exit 1
+        ;;
+esac
+
 # Mode selection menu
 echo
 info "Select installation mode:"
@@ -55,8 +81,11 @@ source "$BASE_DIR/modules/packages-aur.sh"
 source "$BASE_DIR/modules/packages-dev.sh"
 source "$BASE_DIR/modules/zsh.sh"
 source "$BASE_DIR/modules/stow.sh"
+source "$BASE_DIR/modules/monitors.sh"
 source "$BASE_DIR/modules/bin.sh"
-source "$BASE_DIR/modules/fstab.sh"
+if [[ "$MACHINE_TYPE" == "desktop" ]]; then
+    source "$BASE_DIR/modules/fstab.sh"
+fi
 source "$BASE_DIR/modules/ascii.sh"
 source "$BASE_DIR/modules/reboot.sh"
 
@@ -100,16 +129,26 @@ info "Applying dotfiles using stow..."
 run_stow
 
 # -----------------------------------------------
+# HYPRLAND MONITOR CONFIG
+# -----------------------------------------------
+info "Generating Hyprland monitor configuration..."
+generate_monitors_conf
+
+# -----------------------------------------------
 # LOCAL BIN
 # -----------------------------------------------
 info "Linking dotfiles executables..."
 install_local_bin
 
 # -----------------------------------------------
-# FSTAB ENTRY
+# FSTAB ENTRY (DESKTOP ONLY)
 # -----------------------------------------------
-info "Updating fstab..."
-update_fstab
+if [[ "$MACHINE_TYPE" == "desktop" ]]; then
+    info "Updating fstab..."
+    update_fstab
+else
+    ok "Skipping fstab setup (laptop detected)."
+fi
 
 # -----------------------------------------------
 # ASCII ART FINISH
