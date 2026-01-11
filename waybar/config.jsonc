@@ -69,7 +69,7 @@
   },
   "custom/logo": {
     "format": "󰣇",
-    "on-click": "~/.config/hypr/scripts/power-menu"
+    "on-click": "power-menu"
   },
   "pulseaudio": {
     "format": "{icon}",
