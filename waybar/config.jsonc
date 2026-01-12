@@ -9,7 +9,7 @@
     "custom/cava",
     "group/tray-expander",
     "custom/seperator",
-    "pulseaudio",
+    "custom/volume",
     "bluetooth",
     "network",
     "clock",
@@ -83,13 +83,15 @@
     "format": "󰣇",
     "on-click": "power-menu"
   },
-  "pulseaudio": {
-    "format": "{icon}",
-    "format-muted": "",
-    "format-icons": ["", "", "", "", ""],
-    "on-click": "kitty --class wiremix --title wiremix -e wiremix",
+  "custom/volume": {
+    "format": "",
     "tooltip": false,
+    "on-scroll-up": "swayosd-client --output-volume raise",
+    "on-scroll-down": "swayosd-client --output-volume lower",
+    "on-click-middle": "swayosd-client --output-volume mute",
+    "on-click": "kitty --class wiremix --title wiremix -e wiremix"
   },
+
   "bluetooth": {
     "format": "",
         "format-disabled": "󰂲",
