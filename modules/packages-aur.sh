@@ -2,12 +2,12 @@
 
 install_aur_packages() {
     local packages=(
-        impala tuned tuned-ppd wiremix rofi-wayland bluetui hyprland xdg-desktop-portal-hyprland kitty awww-git hyprlock swaync
+        impala tuned hyprsunset tuned-ppd wiremix rofi-wayland bluetui hyprland xdg-desktop-portal-hyprland kitty awww-git hyprlock swaync
         waybar quickshell fastfetch zsh stow bc jq ffmpeg imagemagick yad
         notify-send thunar nwg-look steam neovim openrgb fzf lazygit sddm starship
         sddm-silent-theme zoxide ttf-jetbrains-mono-nerd gamemode lib32-gamemode
         ttf-ibm-plex ttf-roboto noto-fonts spotify spicetify-cli mangohud ttf-gohu-nerd
-        zen-browser-bin ttf-twemoji vesktop hyprshot obs-studio obs-vkcapture obs-pipewire-audio-capture swayosd
+        zen-browser-bin ttf-twemoji vesktop hyprshot obs-studio obs-vkcapture obs-pipewire-audio-capture swayosd yaru-icon-theme gtk-engine-murrine
         )
 
     local to_install=()

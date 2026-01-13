@@ -55,7 +55,7 @@
       "transition-duration": 600,
       "children-class": "tray-group-item"
     },
-    "modules": ["custom/expand-icon", "tray", "power-profiles-daemon"]
+    "modules": ["custom/expand-icon", "tray", "custom/brightness", "custom/nightlight", "power-profiles-daemon"]
   },
   "custom/expand-icon": {
         "format": " ",
@@ -65,6 +65,19 @@
     "icon-size": 16,
     "spacing": 16,
   },
+  "custom/brightness": {
+    "format": "󰃠",
+    "tooltip": false,
+
+    "on-scroll-up": "swayosd-client --brightness raise",
+    "on-scroll-down": "swayosd-client --brightness lower"
+  },
+  "custom/nightlight": {
+    "format": "󰌵",
+    "tooltip": "Night Light",
+    "on-click": "nightlight"
+  },
+
   "power-profiles-daemon": {
     "format": "{icon}",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
