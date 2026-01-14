@@ -58,8 +58,12 @@
     "modules": ["custom/expand-icon", "tray", "custom/brightness", "custom/nightlight", "power-profiles-daemon"]
   },
   "custom/expand-icon": {
-        "format": " ",
-        "tooltip": false
+    "format": "",
+    "tooltip": false,
+    "on-scroll-up": "",
+    "on-scroll-down": "",
+    "on-scroll-left": "",
+    "on-scroll-right": ""
   },
   "tray": {
     "icon-size": 16,
