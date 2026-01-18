@@ -1,0 +1,15 @@
+[color]
+background = '#1f232b'
+foreground = '#d8dee9'
+
+gradient = 1
+gradient_color_1 = '#242933'   # bg_secondary
+gradient_color_2 = '#81a1c1'   # active (nord blue)
+gradient_color_3 = '#8fbcbb'   # selected (nord aqua)
+
+horizontal_gradient = 1
+horizontal_gradient_color_1 = '#242933'  # bg_secondary
+horizontal_gradient_color_2 = '#bf616a'  # urgent (nord red)
+horizontal_gradient_color_3 = '#d8dee9'  # foreground
+
+blend_direction = 'up'

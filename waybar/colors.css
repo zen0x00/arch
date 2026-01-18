@@ -1,23 +1,27 @@
-/* -------------------------------------------------
- * Everforest Dark (Medium)
- * ------------------------------------------------- */
+/* =======================
+   Soft Nord Color Scheme
+   ======================= */
 
-@define-color bg0 #2b3339;
-@define-color bg1 #323c41;
-@define-color bg2 #3a464c;
-@define-color bg3 #445055;
-@define-color bg4 #4f5b58;
+/* Backgrounds */
+@define-color bg0 #242933;  /* main background */
+@define-color bg1 #2b303b;  /* panels */
+@define-color bg2 #323846;  /* raised surfaces */
+@define-color bg3 #3a4152;  /* borders / separators */
+@define-color bg4 #424a5d;  /* active / hover */
 
-@define-color red    #e67e80;
-@define-color orange #e69875;
-@define-color yellow #dbbc7f;
-@define-color green  #a7c080;
-@define-color aqua   #83c092;
-@define-color blue   #7fbbb3;
-@define-color purple #d699b6;
+/* Accents */
+@define-color red    #bf616a; /* nord11 (softened) */
+@define-color orange #d08770; /* nord12 */
+@define-color yellow #ebcb8b; /* nord13 */
+@define-color green  #a3be8c; /* nord14 */
+@define-color aqua   #8fbcbb; /* nord7 */
+@define-color blue   #81a1c1; /* nord9 */
+@define-color purple #b48ead; /* nord15 */
 
-@define-color fg     #d3c6aa;
+/* Foreground */
+@define-color fg #d8dee9; /* nord4 softened */
 
-@define-color grey0  #7a8478;
-@define-color grey1  #859289;
-@define-color grey2  #9da9a0;
+/* Greys */
+@define-color grey0 #616e88; /* dim text */
+@define-color grey1 #7b88a1; /* comments */
+@define-color grey2 #9aa6bf; /* secondary text */

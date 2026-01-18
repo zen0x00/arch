@@ -13,7 +13,7 @@ configuration {
 @import                          "fonts.rasi"
 
 * {
-    border-colour:               var(active );
+    border-colour:               var(active);
     handle-colour:               var(selected);
     background-colour:           var(background);
     foreground-colour:           var(foreground);

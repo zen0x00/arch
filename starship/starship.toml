@@ -8,12 +8,12 @@ $character
 
 # ---------------- DIRECTORY ----------------
 [directory]
-style = "fg:#E6E3DE"
+style = "fg:#d8dee9"
 format = "$path"
 truncation_length = 3
 truncation_symbol = "…/"
 
 # ---------------- PROMPT CHARACTER ----------------
 [character]
-success_symbol = "[❯](fg:#B07A78)"
-error_symbol   = "[❯](fg:#CFA3A0)"
+success_symbol = "[❯](fg:#81a1c1)"
+error_symbol   = "[❯](fg:#bf616a)"

@@ -1,10 +1,9 @@
 return {
-	{ "neanias/everforest-nvim" },
+	{ "EdenEast/nightfox.nvim" },
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "everforest",
-			background = "soft",
+			colorscheme = "nordfox",
 		},
 	},
 }
