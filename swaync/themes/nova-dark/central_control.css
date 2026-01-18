@@ -29,6 +29,8 @@
   box-shadow: 0 0 10px 0 rgba(0,0,0,.6);
   margin: 12px;
   padding: 12px;
+  min-height: 1000px;  /* or whatever height you prefer */
+  max-height: 80vh; 
 }
 
 /* Notifications  */
